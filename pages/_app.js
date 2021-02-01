@@ -1,7 +1,10 @@
 import '../styles/globals.css'
+import { useEffect } from 'react'
 import { GeistProvider, CssBaseline } from '@geist-ui/react'
 import Layout from '../components/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import AOS from 'AOS'
+import 'aos/dist/aos.css'
 
 const myTheme = {
   palette: {
@@ -17,6 +20,10 @@ const myTheme = {
 }
 
 const App = ({ Component, pageProps }) => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
+
   return (
     <GeistProvider theme={myTheme}>
       <CssBaseline />

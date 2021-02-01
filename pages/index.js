@@ -5,14 +5,16 @@ import Navbar from './../components/BootstrapNavbar'
 
 export default function Home() {
   return (
-    <div>
-      <Parallax>
-        <div style={{ height: '100vh' }}></div>
-      </Parallax>
-      <div className='navbar-overlay'>
+    <>
+      <div>
+        <Parallax>
+          <div style={{ height: '100vh' }}></div>
+        </Parallax>
         <Navbar />
       </div>
-      <div style={{ height: '75vh' }}></div>
-    </div>
+      <div data-aos='fade-left' style={{ height: '50vh' }}>
+        <h1>Some Stuff</h1>
+      </div>
+    </>
   )
 }

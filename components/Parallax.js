@@ -5,7 +5,7 @@ const ParallaxComp = ({ children }) => {
     <Parallax
       bgImage='/facundo-sosa-Dpe3ue2Jd0U-unsplash.jpg'
       bgImageAlt='sawmill background'
-      strength={200}
+      strength={300}
     >
       {children}
     </Parallax>

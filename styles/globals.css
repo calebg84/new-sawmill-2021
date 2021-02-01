@@ -19,11 +19,17 @@ nav a {
   font-size: x-large;
 }
 
+.expanded-overlay #basic-navbar-nav > div > a {
+  transition: all 1s linear;
+  text-align: center;
+}
+
 #basic-navbar-nav > div > a {
   font-weight: bold;
   position: relative;
   color: white;
   text-decoration: none;
+  text-align: center;
 }
 
 #basic-navbar-nav > div > a::before {
@@ -55,10 +61,13 @@ nav a {
   transition: 1s;
 }
 
-.parallax-wrapper {
-  top: 0;
-  left: 0;
-  position: absolute;
-  height: 100vh;
-  z-index: 1;
+.expanded-overlay {
+  transition: all 1s linear;
+  height: 42%;
+}
+
+@media (min-width: 1200px) {
+  .navbar-overlay {
+    height: 9%;
+  }
 }
