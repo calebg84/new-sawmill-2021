@@ -20,7 +20,28 @@ nav a {
 }
 
 #basic-navbar-nav > div > a {
-  color: black;
+  font-weight: bold;
+  position: relative;
+  color: white;
+  text-decoration: none;
+}
+
+#basic-navbar-nav > div > a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+#basic-navbar-nav > div > a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
 }
 
 .navbar-overlay {
@@ -29,7 +50,7 @@ nav a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.18);
+  background-color: rgba(0, 0, 0, 0.29);
   overflow-x: hidden;
   transition: 1s;
 }

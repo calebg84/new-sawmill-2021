@@ -14,8 +14,8 @@ const navLinks = [
 const HeaderNavbar = () => {
   return (
     <Navbar bg='none' expand='lg' className='fixed-top' sticky='top'>
-      <Navbar.Brand href='/'>
-        <h2>Heartland Sawmill</h2>
+      <Navbar.Brand className='ml-5' href='/'>
+        <h2 style={{ color: '#9ac8a8' }}>Heartland Sawmill</h2>
       </Navbar.Brand>
       <Navbar.Toggle aria-controls='basic-navbar-nav' />
       <Navbar.Collapse id='basic-navbar-nav'>
@@ -23,7 +23,7 @@ const HeaderNavbar = () => {
           {navLinks.map((navLink) => {
             return (
               <Link key={navLink.link} href={`/${navLink.link}`} passHref>
-                <Nav.Link>{navLink.text}</Nav.Link>
+                <Nav.Link className='px-4'>{navLink.text}</Nav.Link>
               </Link>
             )
           })}
