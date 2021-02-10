@@ -114,6 +114,53 @@
   height: 1em;
 }
 
+.backgroundImage {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
+    url('/facundo-sosa-Dpe3ue2Jd0U-unsplash.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.heroText {
+  color: white;
+  font-size: 1.3rem;
+  height: 100%;
+  width: 40rem;
+  margin: auto;
+  padding: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.heroText h1 {
+  text-align: center;
+  font-size: 4.5rem;
+  line-height: 1;
+}
+
+.heroText h1 span {
+  color: #9ac8a8;
+  font-family: 'Kaushan Script', cursive;
+  font-style: italic;
+  font-size: 4rem;
+  line-height: 1;
+  display: block;
+}
+
+.heroText p {
+  /* font-family: 'Sriracha', cursive; */
+  width: 80%;
+  font-size: 1.3rem;
+  font-weight: 500;
+  line-height: 1;
+  display: block;
+  text-align: center;
+  margin-top: 3rem;
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

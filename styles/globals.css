@@ -51,7 +51,7 @@ nav a {
 }
 
 .navbar-overlay {
-  height: 9%;
+  height: 7rem;
   width: 100%;
   position: fixed;
   top: 0;
@@ -63,11 +63,11 @@ nav a {
 
 .expanded-overlay {
   transition: all 1s linear;
-  height: 42%;
+  height: 23rem;
 }
 
 @media (min-width: 1200px) {
   .navbar-overlay {
-    height: 9%;
+    height: 7rem;
   }
 }

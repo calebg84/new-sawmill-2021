@@ -1,18 +1,22 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
-import Parallax from './../components/Parallax'
-import Navbar from './../components/BootstrapNavbar'
+import { motion } from 'framer-motion'
 
 export default function Home() {
   return (
     <>
-      <div>
-        <Parallax>
-          <div style={{ height: '100vh' }}></div>
-        </Parallax>
-        <Navbar />
+      <div className={styles.backgroundImage}>
+        <div className={styles.heroText}>
+          <h1>
+            <span>Welcome to </span>Heartland Sawmill
+          </h1>
+          <p>
+            We're a portable sawmill business serving Central Illinois including
+            Bloomington, Peoria, Champaign, Decatur and the surrounding areas.
+          </p>
+        </div>
       </div>
-      <div data-aos='fade-left' style={{ height: '50vh' }}>
+      <div style={{ height: '150vh' }}>
         <h1>Some Stuff</h1>
       </div>
     </>

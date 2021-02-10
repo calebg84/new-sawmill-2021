@@ -1,7 +1,7 @@
-// import { Row, Spacer, Link as LinkWrapper } from '@geist-ui/react'
 import Link from 'next/link'
 import Navbar from 'react-bootstrap/Navbar'
 import Nav from 'react-bootstrap/Nav'
+import Image from 'react-bootstrap/Image'
 import { useState } from 'react'
 
 const navLinks = [
@@ -14,7 +14,6 @@ const navLinks = [
 
 const HeaderNavbar = () => {
   const [toggled, setToggled] = useState(false)
-  console.log('toggled is: ', toggled)
   return (
     <div
       className={toggled ? 'navbar-overlay expanded-overlay' : 'navbar-overlay'}
@@ -34,7 +33,16 @@ const HeaderNavbar = () => {
         }}
       >
         <Navbar.Brand className='ml-5' href='/'>
-          <h2 style={{ color: '#9ac8a8' }}>Heartland Sawmill</h2>
+          <Image
+            src='/heartland_sawmill_logo_v2.png'
+            width='85'
+            height='85'
+            className='d-inline-block
+          align-top ml-5'
+            alt='React Bootstrap logo'
+            roundedCircle
+            style={{ backgroundColor: 'white' }}
+          />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>

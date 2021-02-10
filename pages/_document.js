@@ -10,8 +10,17 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
+          <link rel='preconnect' href='https://fonts.gstatic.com' />
           <link
             href='https://fonts.googleapis.com/css2?family=Hind+Siliguri&display=swap'
+            rel='stylesheet'
+          />
+          <link
+            href='https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Sriracha&display=swap'
+            rel='stylesheet'
+          ></link>
+          <link
+            href='https://fonts.googleapis.com/css2?family=Sriracha&display=swap'
             rel='stylesheet'
           />
         </Head>
