@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Button from '../components/Button'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -8,16 +9,34 @@ export default function Home() {
       <div className={styles.backgroundImage}>
         <div className={styles.heroText}>
           <h1>
-            <span>Welcome to </span>Heartland Sawmill
+            <motion.span
+              initial={{ opacity: 0, y: '-20rem' }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 2 }}
+            >
+              Welcome to{' '}
+            </motion.span>
           </h1>
-          <p>
-            We're a portable sawmill business serving Central Illinois including
+          <motion.h1
+            initial={{ opacity: 0, x: '-50rem' }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: 1.5, duration: 1.5 }}
+          >
+            Heartland Sawmill
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3.0, duration: 2 }}
+          >
+            A portable sawmill business serving Central Illinois including
             Bloomington, Peoria, Champaign, Decatur and the surrounding areas.
-          </p>
+          </motion.p>
+          <div className={styles.buttons}>
+            <Button shade='third'>Learn About Us</Button>
+            <Button shade='third'>See Our Lumber</Button>
+          </div>
         </div>
-      </div>
-      <div style={{ height: '150vh' }}>
-        <h1>Some Stuff</h1>
       </div>
     </>
   )

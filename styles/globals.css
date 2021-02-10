@@ -56,14 +56,18 @@ nav a {
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.29);
+  background-color: rgba(0, 0, 0, 0.4);
   overflow-x: hidden;
   transition: 1s;
 }
 
 .expanded-overlay {
   transition: all 1s linear;
-  height: 23rem;
+  height: 24rem;
+}
+
+.btn-primary {
+  background-color: #9ac8a8;
 }
 
 @media (min-width: 1200px) {

@@ -1,0 +1,52 @@
+.button {
+  font-size: 2rem;
+  font-family: 'Sriracha', cursive;
+}
+
+.primary {
+  background-color: #1c251f;
+}
+
+.secondary {
+  background-color: #648381;
+}
+
+.third {
+  background-color: #71927b;
+  border-color: #1c251f;
+}
+
+.third:hover {
+  background-color: #648381;
+  border-color: #1c251f;
+}
+
+.third:active {
+  background-color: #648381;
+  border-color: #1c251f;
+}
+
+.third:focus {
+  background-color: #648381;
+  border-color: #1c251f;
+}
+
+.fourth {
+  background-color: #9ac8a8;
+}
+
+.fifth {
+  background-color: #055300;
+}
+
+.sixth {
+  background-color: #14b872;
+}
+
+.seventh {
+  background-color: #0ade3e;
+}
+
+.eighth {
+  background-color: #0eaa67;
+}

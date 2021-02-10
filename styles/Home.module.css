@@ -115,18 +115,18 @@
 }
 
 .backgroundImage {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)),
-    url('/facundo-sosa-Dpe3ue2Jd0U-unsplash.jpg');
+  background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url('/_RTM_0635.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 700px;
+  height: 100vh;
 }
 
 .heroText {
   color: white;
   font-size: 1.3rem;
   height: 100%;
-  width: 40rem;
+  max-width: 40rem;
   margin: auto;
   padding: auto;
   display: flex;
@@ -136,6 +136,8 @@
 }
 
 .heroText h1 {
+  font-family: 'Sriracha', cursive;
+  text-shadow: black;
   text-align: center;
   font-size: 4.5rem;
   line-height: 1;
@@ -151,7 +153,8 @@
 }
 
 .heroText p {
-  /* font-family: 'Sriracha', cursive; */
+  font-family: 'Sriracha', cursive;
+  /* font-family: 'Kaushan Script', cursive; */
   width: 80%;
   font-size: 1.3rem;
   font-weight: 500;
@@ -159,6 +162,17 @@
   display: block;
   text-align: center;
   margin-top: 3rem;
+}
+
+.buttons {
+  margin-top: 2rem;
+  display: flex;
+  width: 25rem;
+  justify-content: space-around;
+}
+
+.btnPrimary {
+  background-color: #9ac8a8;
 }
 
 @media (max-width: 600px) {

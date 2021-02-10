@@ -39,7 +39,7 @@ const HeaderNavbar = () => {
             height='85'
             className='d-inline-block
           align-top ml-5'
-            alt='React Bootstrap logo'
+            alt='Sawmill logo'
             roundedCircle
             style={{ backgroundColor: 'white' }}
           />
