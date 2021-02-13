@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import Button from '../components/Button'
 import { motion } from 'framer-motion'
@@ -29,13 +30,28 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 3.0, duration: 2 }}
           >
-            A portable sawmill business serving Central Illinois including
-            Bloomington, Peoria, Champaign, Decatur and the surrounding areas.
+            We're a small, portable sawmill business serving Central Illinois
+            (Bloomington, Peoria, Champaign, Decatur). We also sell hardwood
+            lumber and live-edge slabs (as inventory allows).{' '}
           </motion.p>
-          <div className={styles.buttons}>
-            <Button shade='third'>Learn About Us</Button>
-            <Button shade='third'>See Our Lumber</Button>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 3, duration: 2 }}
+            className={styles.buttons}
+          >
+            <Link key='About' href={`/about`} passHref>
+              <a className={styles.anchor}>
+                <Button shade='third'>Learn About Us</Button>
+              </a>
+            </Link>
+
+            <Link key='Lumber' href={`/lumber`} passHref>
+              <a className={styles.anchor}>
+                <Button shade='third'>See Our Lumber</Button>
+              </a>
+            </Link>
+          </motion.div>
         </div>
       </div>
     </>

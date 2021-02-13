@@ -1,0 +1,49 @@
+.header {
+  padding-top: 10rem;
+  height: 30rem;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+.parallaxWrapper {
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.parallaxWrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.aboutContent {
+  padding: 2rem 3rem;
+}
+
+.aboutOne {
+  flex: 1;
+  padding: 2rem;
+}
+
+.videos {
+  padding: 0 9rem;
+}
+
+@media (min-width: 700px) {
+  .aboutContent {
+    display: flex;
+    padding: 2rem 8rem;
+  }
+}
+@media (max-width: 1000px) {
+  .header {
+    height: 40vw;
+  }
+}
+@media (max-width: 600px) {
+  .header {
+    height: 60vw;
+  }
+}

@@ -6,6 +6,7 @@ import { motion } from 'framer-motion'
 const ButtonComp = ({ children, ...props }) => {
   return (
     <motion.div
+      className={styles.div}
       initial={{
         opacity: 0,
       }}
@@ -14,8 +15,9 @@ const ButtonComp = ({ children, ...props }) => {
       }}
       whileHover={{
         scale: 1.1,
-        textShadow: '0px 0px 8px rgb(255, 255, 255)',
-        boxShadow: '0px 0px 8px rgb(255, 255, 255)',
+      }}
+      whileTap={{
+        scale: 1,
       }}
     >
       <button className={styles[props.shade]}>{children}</button>

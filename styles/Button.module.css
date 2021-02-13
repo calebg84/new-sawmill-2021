@@ -1,6 +1,11 @@
 .button {
   font-size: 2rem;
-  font-family: 'Sriracha', cursive;
+  font-family: 'Rubik', sans-serif;
+}
+
+.div {
+  border-radius: 20px;
+  text-decoration: none;
 }
 
 .primary {
@@ -12,23 +17,19 @@
 }
 
 .third {
-  background-color: #71927b;
-  border-color: #1c251f;
+  box-shadow: rgb(0 0 0 / 60%) 0 0 10px 5px;
+  font-size: 1.4rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-color: white;
+  border-radius: 20px;
+  padding: 0.5rem 0.7rem;
 }
 
 .third:hover {
-  background-color: #648381;
-  border-color: #1c251f;
-}
-
-.third:active {
-  background-color: #648381;
-  border-color: #1c251f;
-}
-
-.third:focus {
-  background-color: #648381;
-  border-color: #1c251f;
+  border-radius: 20px;
+  /* background-color: #71927b; */
+  border-color: white;
 }
 
 .fourth {

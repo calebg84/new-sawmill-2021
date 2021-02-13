@@ -3,8 +3,9 @@ import { Parallax } from 'react-parallax'
 const ParallaxComp = ({ children }) => {
   return (
     <Parallax
-      bgImage='/facundo-sosa-Dpe3ue2Jd0U-unsplash.jpg'
-      bgImageAlt='sawmill background'
+      blur={{ min: -15, max: 15 }}
+      bgImage='/man_running_mill.jpg'
+      bgImageAlt='man running mill'
       strength={300}
     >
       {children}
