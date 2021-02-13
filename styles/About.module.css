@@ -28,13 +28,31 @@
 }
 
 .videos {
-  padding: 0 9rem;
+  padding: 0 3rem;
 }
 
-@media (min-width: 700px) {
+.youtubeVideos {
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.youtubeVideos iframe {
+  display: block;
+  margin: 0 auto;
+  width: 450px;
+  height: 253px;
+}
+
+@media (min-width: 930px) {
   .aboutContent {
     display: flex;
     padding: 2rem 8rem;
+  }
+}
+@media (min-width: 1450px) {
+  .youtubeVideosWrapper {
+    display: flex;
+    justify-content: space-between;
   }
 }
 @media (max-width: 1000px) {
