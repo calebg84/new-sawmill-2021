@@ -21,8 +21,8 @@ const PriceTable = () => {
           </tr>
           <tr>
             <td>Full cord (3 face-cords)</td>
-            <td>$275</td>
-            <td>$25</td>
+            <td>$300</td>
+            <td>$50</td>
           </tr>
           <tr>
             <td>Camping Bundles (approx .9 cubic feet</td>
