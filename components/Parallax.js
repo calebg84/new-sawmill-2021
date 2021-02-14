@@ -1,11 +1,10 @@
 import { Parallax } from 'react-parallax'
 
-const ParallaxComp = ({ children }) => {
+const ParallaxComp = ({ children, ...props }) => {
   return (
     <Parallax
-      blur={{ min: -15, max: 15 }}
-      bgImage='/man_running_mill.jpg'
-      bgImageAlt='man running mill'
+      bgImage={props.imgPath}
+      bgImageAlt='parallax image'
       strength={300}
     >
       {children}
