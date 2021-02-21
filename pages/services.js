@@ -96,7 +96,7 @@ const services = () => {
           Do we buy logs? Yes. Will we buy your log? Maybe. As I've mentioned
           before, we're a small, part-time sawmill. We don't have the resources
           to buy lots of logs at top-dollar. So, that means we're picky and
-          cheap when it comes to buying logs. That being said, if you've got
+          frugal when it comes to buying logs. That being said, if you've got
           logs you want to get rid of, give us a call and we'd be glad to
           discuss it.
         </motion.div>

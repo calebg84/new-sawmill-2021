@@ -5,7 +5,7 @@ const ParallaxComp = ({ children, ...props }) => {
     <Parallax
       bgImage={props.imgPath}
       bgImageAlt='parallax image'
-      strength={300}
+      strength={400}
     >
       {children}
     </Parallax>

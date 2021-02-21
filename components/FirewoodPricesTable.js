@@ -15,7 +15,7 @@ const PriceTable = () => {
         </thead>
         <tbody>
           <tr>
-            <td>1 Face-cord (1/3 full cord)</td>
+            <td>Face-cord (1/3 full cord)</td>
             <td>$100</td>
             <td>$25</td>
           </tr>
@@ -25,7 +25,7 @@ const PriceTable = () => {
             <td>$50</td>
           </tr>
           <tr>
-            <td>Camping Bundles (approx .9 cubic feet</td>
+            <td>Camping Bundles (approx .9 cubic feet)</td>
             <td>$5</td>
             <td>pick-up only</td>
           </tr>
