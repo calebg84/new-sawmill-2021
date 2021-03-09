@@ -22,6 +22,7 @@ const slabFinder = async () => {
           sold: doc.data().sold || null,
           kiln: doc.data().kiln || null,
           green: doc.data().green || null,
+          ebayLink: doc.data().ebayLink || null,
           videoUrlFront: doc.data().videoUrlFront || null,
           videoUrlBack: doc.data().videoUrlBack || null,
           hidden: doc.data().hidden || null,

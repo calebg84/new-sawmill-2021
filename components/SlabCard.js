@@ -5,13 +5,11 @@ import Button from 'react-bootstrap/Button'
 import styles from '../styles/SlabCard.module.css'
 
 const SlabCard = ({ slab }) => {
-  // console.log('slab in SlabCard: ', slab)
   const router = useRouter()
   let urls = []
   slab.imageURI.map((image) => {
     urls.push(image.src)
   })
-  // console.log('urls are: ', urls)
   return (
     <div>
       <Card style={{ width: '18rem', height: '32rem', paddingTop: '1rem' }}>
@@ -22,7 +20,7 @@ const SlabCard = ({ slab }) => {
         />
         <Card.Body>
           <Card.Title>{`${slab.species} Slab - $${slab.price}`}</Card.Title>
-          <Card.Text>{slab.description}.</Card.Text>
+          <Card.Text>{slab.description.substring(0, 100)}...</Card.Text>
           <Button
             onClick={() => {
               router.push({

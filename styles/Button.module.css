@@ -33,7 +33,21 @@
 }
 
 .fourth {
+  box-shadow: rgb(0 0 0 / 60%) 0 0 1px 1px;
+  font-size: 1.2rem;
+  font-family: 'Rubik', sans-serif;
   background-color: #9ac8a8;
+  border-color: black;
+  border-radius: 20px;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+  color: black;
+}
+
+.fourth:hover {
+  border-radius: 20px;
+  /* background-color: #71927b; */
+  border-color: black;
 }
 
 .fifth {

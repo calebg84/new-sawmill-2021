@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel'
-import styles from '../styles/ImageCarousel.module.css'
+import styles from '../styles/SlabDetail.module.css'
 
 const imageCarousel = ({ slab }) => {
   return (
@@ -7,7 +7,7 @@ const imageCarousel = ({ slab }) => {
       <Carousel>
         {slab.images.map((image) => {
           return (
-            <Carousel.Item key={image} interval={1000}>
+            <Carousel.Item key={image} interval={3000}>
               <img
                 key={image}
                 className='d-block w-100'

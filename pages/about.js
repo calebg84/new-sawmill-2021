@@ -49,16 +49,16 @@ const about = () => {
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>What We Hope To Be</h2>
-          My vision for this business isn't fancy. I enjoy helping people and I
-          enjoy running a business. I hope that Heartland Sawmill allows me to
-          do both to the best of my ability. I also love taking a log (sometimes
-          a very ugly log) and processing it into something useful and often
-          beautiful. I'm not looking to get rich, but my time, labor, and
-          equipment have a cost associated with them that I try to recoop. I'd
-          be thrilled if the business continued to grow to the point that I
-          could hire a few guys to help. Providing jobs or other means to bless
-          folks in the community would definitely fulfill my biggest visions for
-          Heartland Sawmill.
+          My vision for this business isn't fancy. I enjoy helping people, I
+          love working with wood, and I enjoy running a business. I hope that
+          Heartland Sawmill allows me to do all three to the best of my ability.
+          I also love taking a log (sometimes a very ugly log) and processing it
+          into something useful and often beautiful. I'm not looking to get
+          rich, but my time, labor, and equipment have a cost associated with
+          them that I try to recoop. I'd be thrilled if the business continued
+          to grow to the point that I could hire a few guys to help. Providing
+          jobs or other means to bless folks in the community would definitely
+          fulfill my biggest visions for Heartland Sawmill.
         </motion.div>
       </div>
       <motion.div variants={childVariants} className={styles.videos}>

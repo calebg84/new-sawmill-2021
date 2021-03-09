@@ -34,7 +34,19 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .introParagraphs {
+    padding: 2rem 2rem;
+  }
+  .flexChild {
+    padding: 2rem;
+  }
+  .slabGrid {
+    padding: 2rem;
+  }
+}
+
 .flexChild {
   flex: 1;
-  padding: 1rem;
+  padding: 0.5rem;
 }
