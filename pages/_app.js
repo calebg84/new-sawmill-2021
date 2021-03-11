@@ -3,7 +3,7 @@ import { useEffect } from 'react'
 import { GeistProvider, CssBaseline } from '@geist-ui/react'
 import Layout from '../components/Layout'
 import 'bootstrap/dist/css/bootstrap.min.css'
-import AOS from 'AOS'
+import AOS from 'aos'
 import 'aos/dist/aos.css'
 
 const myTheme = {
