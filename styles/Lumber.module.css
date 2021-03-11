@@ -1,0 +1,52 @@
+.header {
+  padding-top: 10rem;
+  height: 20rem;
+  z-index: -1;
+  box-sizing: border-box;
+}
+
+.parallaxWrapper {
+  z-index: -1;
+  display: inline-block;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.parallaxWrapper img {
+  object-fit: cover;
+  width: 100%;
+  height: 250px;
+}
+
+.slabGrid {
+  padding: 0 7rem;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+}
+.introParagraphs {
+  padding: 2rem 8rem;
+}
+
+.flexChild {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+@media (min-width: 1200px) {
+  .introParagraphs {
+    display: flex;
+  }
+}
+
+@media (max-width: 1200px) {
+  .introParagraphs {
+    padding: 2rem 2rem;
+  }
+  .flexChild {
+    padding: 2rem;
+  }
+  .slabGrid {
+    padding: 2rem;
+  }
+}

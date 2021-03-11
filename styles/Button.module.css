@@ -1,0 +1,67 @@
+.button {
+  font-size: 2rem;
+  font-family: 'Rubik', sans-serif;
+}
+
+.div {
+  border-radius: 20px;
+  text-decoration: none;
+}
+
+.primary {
+  background-color: #1c251f;
+}
+
+.secondary {
+  background-color: #648381;
+}
+
+.third {
+  box-shadow: rgb(0 0 0 / 60%) 0 0 10px 5px;
+  font-size: 1.4rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: rgba(0, 0, 0, 0.55);
+  border-color: white;
+  border-radius: 20px;
+  padding: 0.5rem 0.7rem;
+}
+
+.third:hover {
+  border-radius: 20px;
+  /* background-color: #71927b; */
+  border-color: white;
+}
+
+.fourth {
+  box-shadow: rgb(0 0 0 / 60%) 0 0 1px 1px;
+  font-size: 1.2rem;
+  font-family: 'Rubik', sans-serif;
+  background-color: #9ac8a8;
+  border-color: black;
+  border-radius: 20px;
+  padding: 0.5rem 0.7rem;
+  text-decoration: none;
+  color: black;
+}
+
+.fourth:hover {
+  border-radius: 20px;
+  /* background-color: #71927b; */
+  border-color: black;
+}
+
+.fifth {
+  background-color: #055300;
+}
+
+.sixth {
+  background-color: #14b872;
+}
+
+.seventh {
+  background-color: #0ade3e;
+}
+
+.eighth {
+  background-color: #0eaa67;
+}
