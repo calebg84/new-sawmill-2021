@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { db } from '../../config/firebaseInit'
 import { startCase, capitalize } from 'lodash'
@@ -103,6 +103,54 @@ const lumber = ({ unsoldSlabs: slabs, lumberData }) => {
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
 
+  const [value, setValue] = useState(''),
+    onInput = ({ target: { value } }) => setValue(value),
+    onFormSubmit = (e) => {
+      e.preventDefault()
+      alert(`We will add ${value} to our mailing list. Thanks.`)
+      console.log(value)
+      setValue('')
+    }
+
+  useEffect(() => {
+    //-----------------------------------------------
+    // all of the code between the dividing lines is copied and pasted from moosend as the embedded email form
+    if (!window.mootrack) {
+      console.log('inside mootrack')
+      !(function (t, n, e, o, a) {
+        function d(t) {
+          var n = ~~(Date.now() / 3e5),
+            o = document.createElement(e)
+          ;(o.async = !0), (o.src = t + '?ts=' + n)
+          var a = document.getElementsByTagName(e)[0]
+          a.parentNode.insertBefore(o, a)
+        }
+        ;(t.MooTrackerObject = a),
+          (t[a] =
+            t[a] ||
+            function () {
+              return t[a].q
+                ? void t[a].q.push(arguments)
+                : void (t[a].q = [arguments])
+            }),
+          window.attachEvent
+            ? window.attachEvent('onload', d.bind(this, o))
+            : window.addEventListener('load', d.bind(this, o), !1)
+      })(
+        window,
+        document,
+        'script',
+        'https://cdn.stat-track.com/statics/moosend-tracking.min.js',
+        'mootrack'
+      )
+    }
+    console.log('loading form')
+    mootrack('loadForm', '3f572e058d54472e9f5fe3de77f31c33')
+    //------------------------------------------------
+
+    setShow(false)
+  }, [])
+
   return (
     <motion.div variants={containerVariants} initial='hidden' animate='visible'>
       <Modal centered show={show} onHide={handleClose}>
@@ -133,9 +181,9 @@ const lumber = ({ unsoldSlabs: slabs, lumberData }) => {
           what you're needing.
           <br />
           <br />
-          <a style={{ fontWeight: 'bold' }} onClick={handleShow}>
-            <h4>Click Here to See Current Lumber Inventory</h4>
-          </a>
+          <Button variant='outline-dark' onClick={handleShow}>
+            Click Here to See Current Lumber Inventory
+          </Button>
         </div>
         <div className={styles.flexChild}>
           <h2>Live-Edge Slabs</h2>
@@ -146,18 +194,6 @@ const lumber = ({ unsoldSlabs: slabs, lumberData }) => {
           in stock.
           <br />
           <br />
-          <Form>
-            <Form.Group controlId='formBasicEmail'>
-              <Form.Label>
-                Enter your email here to receive updates when new lumber or
-                slabs are added
-              </Form.Label>
-              <Form.Control type='email' placeholder='Enter email' />
-            </Form.Group>
-            <Button variant='primary' type='submit'>
-              Submit
-            </Button>
-          </Form>
         </div>
       </motion.div>
       <motion.div variants={childVariants} className={styles.slabGrid}>

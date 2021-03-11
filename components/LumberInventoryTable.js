@@ -10,18 +10,24 @@ const LumberInventoryTable = (props) => {
           <tr>
             <th>Species</th>
             <th>Thickness</th>
-            <th>Approximate Quantity Available (bdft)</th>
+            <th>Approx Amt Available (bdft)</th>
             <th>Price (per bdft)</th>
           </tr>
         </thead>
         <tbody>
-          {props.lumber.map((type) => {
+          {props.lumber.map((type, index) => {
             return (
-              <tr>
-                <td>{type.species}</td>
-                <td>{type.thickness}</td>
-                <td>{type.quantity}</td>
-                <td>{`$${type.price}`}</td>
+              <tr key={`${type.species}`}>
+                <td key={`${type.species}-${index}`}>{type.species}</td>
+                <td key={`thickness-${type.species}-${index}`}>
+                  {type.thickness}
+                </td>
+                <td key={`quantity-${type.species}-${index}`}>
+                  {type.quantity}
+                </td>
+                <td
+                  key={`price-${type.species}-${index}`}
+                >{`$${type.price}`}</td>
               </tr>
             )
           })}

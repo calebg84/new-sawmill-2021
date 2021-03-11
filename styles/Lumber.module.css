@@ -28,6 +28,11 @@
   padding: 2rem 8rem;
 }
 
+.flexChild {
+  flex: 1;
+  padding: 0.5rem;
+}
+
 @media (min-width: 1200px) {
   .introParagraphs {
     display: flex;
@@ -44,9 +49,4 @@
   .slabGrid {
     padding: 2rem;
   }
-}
-
-.flexChild {
-  flex: 1;
-  padding: 0.5rem;
 }
