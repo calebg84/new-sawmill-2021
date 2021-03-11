@@ -23,7 +23,6 @@ const App = ({ Component, pageProps }) => {
   useEffect(() => {
     AOS.init()
     if (!window.mootrack) {
-      console.log('inside mootrack')
       !(function (t, n, e, o, a) {
         function d(t) {
           var n = ~~(Date.now() / 3e5),
@@ -51,7 +50,6 @@ const App = ({ Component, pageProps }) => {
         'mootrack'
       )
     }
-    console.log('loading form')
     mootrack('loadForm', '3f572e058d54472e9f5fe3de77f31c33')
   }, [])
 
