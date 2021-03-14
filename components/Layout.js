@@ -6,12 +6,15 @@ const Layout = ({ children }) => {
   return (
     <>
       <Head>
-        <title>Create Next App</title>
-        <link rel='icon' href='/favicon.ico' />
+        <title>Heartland Sawmill</title>
+        <link rel='icon' href='/heartland_sawmill_logo_v2.png' />
       </Head>
       <Navbar />
       {children}
-      <div className='footer'>Copyright 2021</div>
+      <div style={{ textAlign: 'center' }} className='footer'>
+        Copyright &copy; 2021, Heartland Sawmill, All Rights Reserved; Photos
+        courtesy of Ryan Maxwell rtmaxwell54@gmail.com
+      </div>
     </>
   )
 }

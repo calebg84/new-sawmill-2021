@@ -1,19 +1,38 @@
 import Fade from 'react-bootstrap/Fade'
+import ContactForm from '../components/ContactForm'
+import styles from '../styles/Contact.module.css'
 
 const contact = () => {
   return (
-    <div style={{ marginTop: '15rem' }}>
-      <form
-        id='contactform'
-        action='https://formsubmit.io/send/4f13827f-5efd-4b1f-800f-6b01ba7a68e0'
-        method='POST'
-      >
-        <input name='name' type='text' id='name' />
-        <input name='email' type='email' id='email' />
-        <textarea name='comment' id='comment' rows='3'></textarea>
-
-        <input value='Submit' type='submit' />
-      </form>
+    <div className={styles.contactWrapper} style={{ marginTop: '10rem' }}>
+      <div className={styles.contactOne}>
+        <h3 className='text-center'>Contact Heartland Sawmill</h3>
+        <br />
+        <br />
+        <div className='text-center'>Phone: (309) 853-7497</div>
+        <div className='text-center'>Email: heartlandsawmill@gmail.com</div>
+        <div className='text-center'>
+          <a
+            href='https://www.youtube.com/channel/UC_17-xfDovREZsvK8rbBljA'
+            target='_blank'
+          >
+            Youtube
+          </a>
+        </div>
+        <div className='text-center'>
+          <a href='https://www.facebook.com/heartlandsawmill' target='_blank'>
+            Facebook
+          </a>
+        </div>
+        <br />
+        <br />
+        <div className='text-center'>
+          Or use the form on this page to send us your questions.
+        </div>
+      </div>
+      <div className={styles.contactOne}>
+        <ContactForm />
+      </div>
     </div>
   )
 }

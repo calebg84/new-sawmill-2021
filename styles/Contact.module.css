@@ -1,0 +1,12 @@
+@media (min-width: 930px) {
+  .contactWrapper {
+    display: flex;
+    padding: 2rem;
+    height: 90vh;
+  }
+}
+
+.contactOne {
+  flex: 1;
+  padding: 2rem 6rem;
+}
