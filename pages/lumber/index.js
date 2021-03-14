@@ -5,6 +5,8 @@ import { startCase, capitalize } from 'lodash'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
+import Dropdown from 'react-bootstrap/Dropdown'
+import DropdownButton from 'react-bootstrap/DropdownButton'
 import styles from '../../styles/Lumber.module.css'
 import LumberInventoryTable from '../../components/LumberInventoryTable'
 import Parallax from '../../components/Parallax'
@@ -97,20 +99,24 @@ async function slabFinder() {
     })
 }
 
-const lumber = ({ unsoldSlabs: slabs, lumberData }) => {
+const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
   const [show, setShow] = useState(false)
+  const [slabList, setSlabList] = useState(slabs)
+  const [speciesListing, setSpeciesListing] = useState(species)
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
-
-  const [value, setValue] = useState(''),
-    onInput = ({ target: { value } }) => setValue(value),
-    onFormSubmit = (e) => {
-      e.preventDefault()
-      alert(`We will add ${value} to our mailing list. Thanks.`)
-      console.log(value)
-      setValue('')
+  const speciesSelection = async (e) => {
+    if (e == 'clear') {
+      setSlabList(slabs)
+    } else {
+      await setSlabList(
+        slabs.filter((slab) => {
+          return slab.species == e
+        })
+      )
     }
+  }
 
   useEffect(() => {
     //-----------------------------------------------
@@ -191,10 +197,23 @@ const lumber = ({ unsoldSlabs: slabs, lumberData }) => {
           in stock.
           <br />
           <br />
+          <DropdownButton
+            variant='outline-dark'
+            id='dropdown-basic-button'
+            title='Filter Slabs'
+            onSelect={(e) => {
+              speciesSelection(e)
+            }}
+          >
+            <Dropdown.Item eventKey={'clear'}>Clear Filter</Dropdown.Item>
+            {speciesListing.map((spec) => {
+              return <Dropdown.Item eventKey={spec}>{spec}</Dropdown.Item>
+            })}
+          </DropdownButton>
         </div>
       </motion.div>
       <motion.div variants={childVariants} className={styles.slabGrid}>
-        {slabs.map((slab) => {
+        {slabList.map((slab) => {
           return (
             <div key={slab.id} className={styles.flexChild}>
               <SlabCard slab={slab} />
@@ -220,19 +239,25 @@ async function retry(fn, n) {
 export async function getServerSideProps(context) {
   const slabData = await retry(slabFinder, 3)
   const lumberData = await retry(lumberFinder, 3)
+  let speciesList = []
 
   let unsoldSlabs
   if (!slabData || !lumberData) {
     slabData = await retry(slabFinder, 3)
     lumberData = await retry(lumberFinder, 3)
   } else {
+    let species = []
     unsoldSlabs = slabData.filter((slab) => !slab.sold)
     unsoldSlabs.sort((a, b) => (a.stockID > b.stockID ? 1 : -1))
     lumberData.sort((a, b) => (a.species > b.species ? 1 : -1))
+    unsoldSlabs.map((slab) => {
+      species.push(slab.species)
+    })
+    speciesList = [...new Set(species)]
   }
 
   return {
-    props: { unsoldSlabs, lumberData },
+    props: { unsoldSlabs, lumberData, speciesList },
   }
 }
 
