@@ -32,6 +32,9 @@ const SlabCard = ({ slab }) => {
           >
             See Details
           </Button>
+          {slab.shipping ? (
+            <Button variant='info'>Free Shipping!</Button>
+          ) : null}
         </Card.Body>
       </Card>
     </div>
