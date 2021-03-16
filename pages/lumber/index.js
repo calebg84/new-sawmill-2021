@@ -75,6 +75,7 @@ async function slabFinder() {
           maxWidth: doc.data().maxWidth || null,
           minWidth: doc.data().minWidth || null,
           price: doc.data().price || null,
+          shipping: doc.data().shipping || null,
           species: startCase(doc.data().species) || null,
           length: doc.data().length || null,
           description: capitalize(doc.data().description) || null,
@@ -228,7 +229,6 @@ const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
 async function retry(fn, n) {
   for (let i = 0; i < n; i++) {
     try {
-      console.log(`attempt #${i}`)
       return await fn()
     } catch {}
   }

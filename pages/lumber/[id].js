@@ -17,6 +17,9 @@ const SlabDetail = () => {
           <h2>{`${passedProps.species} Slab`}</h2>
           <p>{`Slab ID: #${passedProps.stockID}`}</p>
           <h3>{`$${passedProps.price}`}</h3>
+          {passedProps.shipping ? (
+            <h4 style={{ color: 'blue' }}>{`This slab ships for free!`}</h4>
+          ) : null}
           <span>
             <span style={{ fontWeight: 'bold' }}>Status: </span>
             {passedProps.kiln
