@@ -2,6 +2,7 @@ import React from 'react'
 import { useRouter } from 'next/router'
 import Card from 'react-bootstrap/Card'
 import Button from 'react-bootstrap/Button'
+import Badge from 'react-bootstrap/Badge'
 import styles from '../styles/SlabCard.module.css'
 
 const SlabCard = ({ slab }) => {
@@ -32,8 +33,11 @@ const SlabCard = ({ slab }) => {
           >
             See Details
           </Button>
+          {`   `}
           {slab.shipping ? (
-            <Button variant='info'>Free Shipping!</Button>
+            <Badge pill variant='info'>
+              Free Shipping!
+            </Badge>
           ) : null}
         </Card.Body>
       </Card>
