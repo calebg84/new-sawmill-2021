@@ -12,7 +12,7 @@
 }
 
 .firstRow {
-  padding: 5rem 10rem;
+  padding: 8rem 10rem 5rem 10rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   grid-gap: 3rem;
@@ -48,7 +48,7 @@
 
 @media (max-width: 1270px) {
   .firstRow {
-    padding: 5rem 3rem 3rem 3rem;
+    padding: 8rem 3rem 3rem 3rem;
   }
 }
 
@@ -62,7 +62,7 @@
 }
 @media (max-width: 600px) {
   .firstRow {
-    padding: 5rem 0 0 0;
+    padding: 8rem 0 0 0;
   }
   .videos iframe {
     width: 500px;
