@@ -9,7 +9,7 @@ const RateTable = () => {
         <thead>
           <tr>
             <th>Where Milling Happens</th>
-            <th>Hourly Rate</th>
+            <th>Hourly Rate (2-hour minimum)</th>
             <th>Travel/Setup Fee</th>
           </tr>
         </thead>
