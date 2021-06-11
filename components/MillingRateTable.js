@@ -16,16 +16,11 @@ const RateTable = () => {
         <tbody>
           <tr>
             <td>Logs are brought to us</td>
-            <td>$85</td>
+            <td>$100</td>
             <td>$0</td>
           </tr>
           <tr>
-            <td>We come to the logs (less than 30 miles away)</td>
-            <td>$100</td>
-            <td>$100 flat rate</td>
-          </tr>
-          <tr>
-            <td>We come to the logs (more than 30 miles away)</td>
+            <td>We come to the logs</td>
             <td>$100</td>
             <td>$100 + $2/mile for the round-trip mileage</td>
           </tr>
