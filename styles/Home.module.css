@@ -3,7 +3,7 @@
     url('/walnut_stickered.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 130vh;
 }
 
 .heroText {
@@ -76,6 +76,11 @@
 }
 
 @media (max-width: 500px) {
+  .heroText {
+    padding-top: 7.5rem;
+    height: auto;
+  }
+
   .buttons {
     flex-direction: column;
     justify-content: space-between;
