@@ -21,7 +21,7 @@ const RateTable = () => {
           </tr>
           <tr>
             <td>We come to the logs</td>
-            <td>$100</td>
+            <td>$125</td>
             <td>$100 + $2/mile for the round-trip mileage</td>
           </tr>
         </tbody>
