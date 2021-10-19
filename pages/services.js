@@ -48,6 +48,7 @@ const services = () => {
               height={270}
             />
           </div>
+          Custom sawmilling for customers is the primary focus of our business.
           Our sawmill can handle logs up to 20 ft long and 3 ft in diameter. It
           can cut logs into most any dimension you could request. Whether it's
           1/8" veneer or 10"x10" timbers, our mill can handle it. Our mill is
@@ -59,7 +60,7 @@ const services = () => {
           </Link>
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
-          <h2>Kiln Dried Hardwood Lumber</h2>
+          <h2>Kiln Dried Live-Edge Slabs</h2>
           <div className={styles.imageWrapper}>
             <Image
               src='/stickered_slabs.jpg'
@@ -68,12 +69,11 @@ const services = () => {
               height={270}
             />
           </div>
-          In addition to custom milling, we sell a variety of kiln dried
-          hardwood lumber that we have personally cut and dried in our solar
-          kiln. Inventory varies from week to week so give us a call to find out
-          what we've got in-stock.
+          In addition to custom milling, we sell LIMITED QUANTITIES of kiln
+          dried hardwood slabs that we have cut and dried in our solar kiln. Our
+          inventory is limited but give us a call to see what we have in stock.
         </motion.div>
-        <motion.div variants={childVariants} className={styles.aboutOne}>
+        {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
           <div className={styles.imageWrapper}>
             <Image
@@ -87,7 +87,7 @@ const services = () => {
           lumber cut (pun intended) get processed into firewood. We sell mixed
           hardwood firewood by the bundle or face-cord. We also offer local
           delivery for an additional fee. Firewood rates are listed below.
-        </motion.div>
+        </motion.div> */}
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Log Buyer</h2>
           <div className={styles.imageWrapper}>
@@ -106,10 +106,6 @@ const services = () => {
           <div>
             <h3>Sawmill Rates</h3>
             <MillingRateTable></MillingRateTable>
-          </div>
-          <div>
-            <h3>Firewood Prices</h3>
-            <FirewoodTable></FirewoodTable>
           </div>
         </div>
       </motion.div>
