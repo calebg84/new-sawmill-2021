@@ -38,8 +38,8 @@ const about = () => {
           <h2>About "Us"</h2>
           So, "us" is primarily one man... me (Caleb). But I usually say "we" or
           "us" because I have a few close friends who help me (a ton) in a
-          variety of ways with the business. I've been milling logs now for 7
-          years. Professionally for 6. I started out as a woodworker and when my
+          variety of ways with the business. I've been milling logs now for 8
+          years. Professionally for 7. I started out as a woodworker and when my
           wife and I bought some land with timber, I invested in a Norwood
           sawmill and began milling logs for my own use. Things grew from there
           and eventually I sold the Norwood and purchased a Wood-Mizer portable,
@@ -55,10 +55,11 @@ const about = () => {
           I also love taking a log (sometimes a very ugly log) and processing it
           into something useful and often beautiful. I'm not looking to get
           rich, but my time, labor, and equipment have a cost associated with
-          them that I try to recoop. I'd be thrilled if the business continued
-          to grow to the point that I could hire a few guys to help. Providing
-          jobs or other means to bless folks in the community would definitely
-          fulfill my biggest visions for Heartland Sawmill.
+          them that I try to recoop. I'd be thrilled if the grew to the point
+          that I could hire a few guys to help, but at this point in life, my
+          family is my top priority and the business has had to take a backseat.
+          As a result, the business growth has been somewhat bottlenecked by my
+          available time.
         </motion.div>
       </div>
       <motion.div variants={childVariants} className={styles.videos}>
