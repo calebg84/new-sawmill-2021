@@ -21,7 +21,7 @@ const SlabDetail = () => {
             <h4 style={{ color: 'blue' }}>{`This slab ships for free!`}</h4>
           ) : null}
           <span>
-            <span style={{ fontWeight: 'bold' }}>Status: </span>
+            <span style={{ fontWeight: 'bold' }}>Drying Status: </span>
             {passedProps.kiln
               ? 'In the kiln'
               : passedProps.green
