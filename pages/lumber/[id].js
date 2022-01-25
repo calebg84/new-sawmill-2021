@@ -26,7 +26,7 @@ const SlabDetail = () => {
               ? 'In the kiln'
               : passedProps.green
               ? 'Air drying'
-              : 'Kiln Dried and ready'}
+              : 'Dried and ready'}
           </span>
           <p>
             <span style={{ fontWeight: 'bold' }}>Notes: </span>
