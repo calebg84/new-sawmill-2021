@@ -13,7 +13,7 @@ export default function Home() {
             <motion.span
               initial={{ opacity: 0, y: '-20rem' }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5, duration: 2 }}
+              transition={{ delay: 0.5, duration: 1 }}
             >
               Welcome to{' '}
             </motion.span>
@@ -21,14 +21,14 @@ export default function Home() {
           <motion.h1
             initial={{ opacity: 0, x: '-50rem' }}
             animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: 1.5, duration: 1.5 }}
+            transition={{ delay: 1.5, duration: 1 }}
           >
             Heartland Sawmill
           </motion.h1>
           <motion.p
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3.0, duration: 2 }}
+            transition={{ delay: 2.0, duration: 1 }}
           >
             We're a small, portable sawmill business serving Central Illinois
             (Bloomington, Peoria, Champaign, Decatur). We also sell hardwood
@@ -37,7 +37,7 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ delay: 3, duration: 2 }}
+            transition={{ delay: 2, duration: 1 }}
             className={styles.buttons}
           >
             <Link key='About' href={`/about`} passHref>
