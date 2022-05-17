@@ -104,7 +104,7 @@ const services = () => {
       <motion.div variants={childVariants} className={styles.videos}>
         <div className={styles.rateTables}>
           <div>
-            <h3>Sawmill Rates</h3>
+            <h3>Sawmill Rates (new rates effective 6/1/2022)</h3>
             <MillingRateTable></MillingRateTable>
           </div>
         </div>

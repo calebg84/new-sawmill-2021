@@ -55,11 +55,10 @@ const about = () => {
           I also love taking a log (sometimes a very ugly log) and processing it
           into something useful and often beautiful. I'm not looking to get
           rich, but my time, labor, and equipment have a cost associated with
-          them that I try to recoop. I'd be thrilled if the grew to the point
-          that I could hire a few guys to help, but at this point in life, my
-          family is my top priority and the business has had to take a backseat.
-          As a result, the business growth has been somewhat bottlenecked by my
-          available time.
+          them that I try to recoop. I'd be thrilled if the business grew to the
+          point that I could hire a few guys to help, but at this point in life,
+          my family is my top priority and the business has had to take a
+          backseat.
         </motion.div>
       </div>
       <motion.div variants={childVariants} className={styles.videos}>
