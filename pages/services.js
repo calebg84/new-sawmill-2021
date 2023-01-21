@@ -48,10 +48,10 @@ const services = () => {
               height={270}
             />
           </div>
-          Custom sawmilling for customers is the primary focus of our business.
-          Our sawmill can handle logs up to 20 ft long and 3 ft in diameter. It
-          can cut logs into most any dimension you could request. Whether it's
-          1/8" veneer or 10"x10" timbers, our mill can handle it. Our mill is
+          Custom milling logs for customers is one of the services we offer. Our
+          sawmill can handle logs up to 20 ft long and 3 ft in diameter. It can
+          cut logs into most any dimension you could request. Whether it's 1/8"
+          veneer or 10"x10" timbers, our mill can handle it. Our mill is
           portable so we can come to you or you can bring your logs to us. It
           saves a little money to bring the logs to us. Check out the rates
           table below and see our portable sawmill in action by checking out our{' '}
@@ -69,9 +69,9 @@ const services = () => {
               height={270}
             />
           </div>
-          In addition to custom milling, we sell LIMITED QUANTITIES of kiln
-          dried hardwood slabs that we have cut and dried in our solar kiln. Our
-          inventory is limited but give us a call to see what we have in stock.
+          In addition to custom milling, we sell kiln dried hardwood slabs and
+          lumber that we have cut and dried in our solar kiln. Our inventory
+          isn't huge, but give us a call to see what we have in stock.
         </motion.div>
         {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
@@ -93,12 +93,11 @@ const services = () => {
           <div className={styles.imageWrapper}>
             <Image src='/logs.jpg' alt='log picture' width={400} height={270} />
           </div>
-          Do we buy logs? Yes. Will we buy your log? Maybe. As I've mentioned
-          before, we're a small, part-time sawmill. We don't have the resources
-          to buy lots of logs at top-dollar. So, that means we're picky and
-          frugal when it comes to buying logs. That being said, if you've got
-          logs you want to get rid of, give us a call and we'd be glad to
-          discuss it.
+          Do we buy logs? Yes. Will we buy your log? Maybe. We're not a huge
+          operation and we don't have the market to buy lots of logs at
+          top-dollar. So, that means we're usually a little picky and frugal
+          when it comes to buying logs. That being said, if you've got logs you
+          want to get rid of, give us a call and we'd be glad to discuss it.
         </motion.div>
       </div>
       <motion.div variants={childVariants} className={styles.videos}>
