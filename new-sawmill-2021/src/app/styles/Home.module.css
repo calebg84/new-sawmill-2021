@@ -54,6 +54,7 @@
   display: flex;
   width: 28rem;
   justify-content: space-around;
+  color: white;
 }
 
 .btnPrimary {

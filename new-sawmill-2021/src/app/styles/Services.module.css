@@ -47,14 +47,14 @@
   margin: 1rem 0;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1400px) {
   .aboutContent {
     display: flex;
     padding: 2rem 8rem;
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1400px) {
   .imageWrapper {
     text-align: center;
   }

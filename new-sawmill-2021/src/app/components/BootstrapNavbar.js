@@ -49,8 +49,14 @@ const HeaderNavbar = () => {
           <Nav className='mr-auto mx-auto'>
             {navLinks.map((navLink) => {
               return (
-                <Link key={navLink.link} href={`/${navLink.link}`} passHref>
-                  <Nav.Link className='px-4'>{navLink.text}</Nav.Link>
+                <Link
+                  key={navLink.link}
+                  className='px-4'
+                  href={`/${navLink.link}`}
+                  passHref
+                >
+                  {navLink.text}
+                  {/* <Nav.Link className='px-4'>{navLink.text}</Nav.Link> */}
                 </Link>
               )
             })}

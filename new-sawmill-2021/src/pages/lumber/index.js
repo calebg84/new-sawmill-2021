@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
-import { db } from '../../config/firebaseInit'
+import { db } from '../../app/config/firebaseInit'
+import { collection, getDocs } from 'firebase/firestore'
 import { startCase, capitalize } from 'lodash'
 import Modal from 'react-bootstrap/Modal'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button'
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
-import styles from '../../styles/Lumber.module.css'
-import LumberInventoryTable from '../../components/LumberInventoryTable'
-import Parallax from '../../components/Parallax'
-import SlabCard from '../../components/SlabCard'
+import styles from '../../app/styles/Lumber.module.css'
+import LumberInventoryTable from '../../app/components/LumberInventoryTable'
+import Parallax from '../../app/components/Parallax'
+import SlabCard from '../../app/components/SlabCard'
 
 const containerVariants = {
   hidden: {
@@ -34,85 +35,20 @@ const childVariants = {
   },
 }
 
-async function lumberFinder() {
-  let lumberList = []
-  return db
-    .collection('lumber')
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        const data = {
-          id: doc.id,
-          price: doc.data().price || null,
-          species: doc.data().species || null,
-          quantity: doc.data().quantity || null,
-          thickness: doc.data().thickness || null,
-          hidden: doc.data().hidden || null,
-        }
-        if (data.hidden === true) {
-          null
-        } else {
-          lumberList.push(data)
-        }
-      })
-    })
-    .then(() => {
-      return lumberList
-    })
-}
-
-async function slabFinder() {
-  let slabList = []
-  return db
-    .collection('slabs')
-    .get()
-    .then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        const data = {
-          id: doc.id,
-          stockID: doc.data().stockID || null,
-          imageURI: doc.data().imageURI || null,
-          maxWidth: doc.data().maxWidth || null,
-          minWidth: doc.data().minWidth || null,
-          price: doc.data().price || null,
-          shipping: doc.data().shipping || null,
-          species: startCase(doc.data().species) || null,
-          length: doc.data().length || null,
-          description: capitalize(doc.data().description) || null,
-          thickness: doc.data().thickness || null,
-          sold: doc.data().sold || null,
-          kiln: doc.data().kiln || null,
-          green: doc.data().green || null,
-          ebayLink: doc.data().ebayLink || null,
-          videoUrlFront: doc.data().videoUrlFront || null,
-          videoUrlBack: doc.data().videoUrlBack || null,
-          hidden: doc.data().hidden || null,
-        }
-        if (data.hidden === true) {
-          null
-        } else {
-          slabList.push(data)
-        }
-      })
-    })
-    .then(() => {
-      return slabList
-    })
-}
-
-const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
+const lumber = ({ slabData, lumberData }) => {
   const [show, setShow] = useState(false)
-  const [slabList, setSlabList] = useState(slabs)
-  const [speciesListing, setSpeciesListing] = useState(species)
+  const [unsoldSlabs, setUnsoldSlabs] = useState([])
+  const [slabList, setSlabList] = useState([])
+  const [speciesListing, setSpeciesListing] = useState([])
 
   const handleClose = () => setShow(false)
   const handleShow = () => setShow(true)
   const speciesSelection = async (e) => {
     if (e == 'clear') {
-      setSlabList(slabs)
+      setSlabList(unsoldSlabs)
     } else {
       await setSlabList(
-        slabs.filter((slab) => {
+        unsoldSlabs.filter((slab) => {
           return slab.species == e
         })
       )
@@ -155,6 +91,18 @@ const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
     setShow(false)
   }, [])
 
+  useEffect(() => {
+    let species = []
+    let unsoldSlabs = slabData.filter((slab) => !slab.sold)
+    unsoldSlabs.sort((a, b) => (a.stockID > b.stockID ? 1 : -1))
+    lumberData.sort((a, b) => (a.species > b.species ? 1 : -1))
+    unsoldSlabs.map((slab) => {
+      species.push(slab.species)
+    })
+    setUnsoldSlabs(unsoldSlabs)
+    setSlabList(unsoldSlabs)
+    setSpeciesListing([...new Set(species)])
+  }, [slabData, lumberData])
   return (
     <motion.div variants={containerVariants} initial='hidden' animate='visible'>
       <Modal centered show={show} onHide={handleClose}>
@@ -162,6 +110,7 @@ const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
           <Modal.Title>Current Lumber Inventory</Modal.Title>
         </Modal.Header>
         <Modal.Body>
+          {/* <LumberInventoryTable lumber={{}} /> */}
           <LumberInventoryTable lumber={lumberData} />
         </Modal.Body>
         <Modal.Footer>
@@ -208,7 +157,11 @@ const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
           >
             <Dropdown.Item eventKey={'clear'}>Clear Filter</Dropdown.Item>
             {speciesListing.map((spec) => {
-              return <Dropdown.Item eventKey={spec}>{spec}</Dropdown.Item>
+              return (
+                <Dropdown.Item key={spec} eventKey={spec}>
+                  {spec}
+                </Dropdown.Item>
+              )
             })}
           </DropdownButton>
         </div>
@@ -217,7 +170,7 @@ const lumber = ({ unsoldSlabs: slabs, lumberData, speciesList: species }) => {
         {slabList.map((slab) => {
           return (
             <div key={slab.id} className={styles.flexChild}>
-              <SlabCard slab={slab} />
+              <SlabCard key={slab.id} slab={slab} />
             </div>
           )
         })}
@@ -230,34 +183,27 @@ async function retry(fn, n) {
   for (let i = 0; i < n; i++) {
     try {
       return await fn()
-    } catch {}
+    } catch (error) {
+      console.error(error)
+      // throw new Error(`Failed retrying ${n} times`)
+    }
   }
-
-  throw new Error(`Failed retrying ${n} times`)
 }
 
-export async function getServerSideProps(context) {
-  const slabData = await retry(slabFinder, 3)
-  const lumberData = await retry(lumberFinder, 3)
-  let speciesList = []
-
-  let unsoldSlabs
-  if (!slabData || !lumberData) {
-    slabData = await retry(slabFinder, 3)
-    lumberData = await retry(lumberFinder, 3)
-  } else {
-    let species = []
-    unsoldSlabs = slabData.filter((slab) => !slab.sold)
-    unsoldSlabs.sort((a, b) => (a.stockID > b.stockID ? 1 : -1))
-    lumberData.sort((a, b) => (a.species > b.species ? 1 : -1))
-    unsoldSlabs.map((slab) => {
-      species.push(slab.species)
-    })
-    speciesList = [...new Set(species)]
-  }
+export async function getServerSideProps() {
+  const slabSnapshot = await getDocs(collection(db, 'slabs'))
+  const slabData = slabSnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }))
+  const lumberSnapshot = await getDocs(collection(db, 'lumber'))
+  const lumberData = lumberSnapshot.docs.map((doc) => ({
+    id: doc.id,
+    ...doc.data(),
+  }))
 
   return {
-    props: { unsoldSlabs, lumberData, speciesList },
+    props: { slabData, lumberData },
   }
 }
 

@@ -1,6 +1,6 @@
 import Fade from 'react-bootstrap/Fade'
-import Parallax from '../components/Parallax'
-import styles from '../styles/About.module.css'
+import Parallax from '../app/components/Parallax'
+import styles from '../app/styles/About.module.css'
 import { motion } from 'framer-motion'
 
 const containerVariants = {

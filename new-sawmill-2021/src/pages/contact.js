@@ -1,6 +1,6 @@
 import Fade from 'react-bootstrap/Fade'
-import ContactForm from '../components/ContactForm'
-import styles from '../styles/Contact.module.css'
+import ContactForm from '../app/components/ContactForm'
+import styles from '../app/styles/Contact.module.css'
 
 const contact = () => {
   return (

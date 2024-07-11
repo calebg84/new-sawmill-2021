@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import Button from '../components/Button'
+import styles from '../app/styles/Home.module.css'
+import Button from '../app/components/Button'
 import { motion } from 'framer-motion'
 
 export default function Home() {
@@ -40,16 +40,12 @@ export default function Home() {
             transition={{ delay: 2, duration: 1 }}
             className={styles.buttons}
           >
-            <Link key='About' href={`/about`} passHref>
-              <a className={styles.anchor}>
-                <Button shade='third'>Learn About Us</Button>
-              </a>
+            <Link className={styles.anchor} key='About' href={`/about`}>
+              <Button shade='third'>Learn About Us</Button>
             </Link>
 
-            <Link key='Lumber' href={`/lumber`} passHref>
-              <a className={styles.anchor}>
-                <Button shade='third'>See Our Lumber</Button>
-              </a>
+            <Link className={styles.anchor} key='Lumber' href={`/lumber`}>
+              <Button shade='third'>See Our Lumber</Button>
             </Link>
           </motion.div>
         </div>
