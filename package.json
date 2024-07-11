@@ -1,24 +1,28 @@
 {
-  "name": "nextjs",
+  "name": "new-sawmill-2021",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "@geist-ui/react": "^2.1.0-canary.2",
-    "@geist-ui/react-icons": "^1.0.1",
     "aos": "^2.3.4",
-    "axios": "^0.21.1",
-    "bootstrap": "^4.6.0",
-    "firebase": "^7.6.1",
-    "framer-motion": "^3.3.0",
-    "next": "10.0.5",
-    "react": "17.0.1",
-    "react-bootstrap": "^1.4.3",
-    "react-dom": "17.0.1",
-    "react-parallax": "^3.1.2"
+    "axios": "^1.7.2",
+    "bootstrap": "^5.3.3",
+    "firebase": "^10.12.3",
+    "framer-motion": "^11.3.0",
+    "lodash": "^4.17.21",
+    "next": "14.2.5",
+    "react": "^18",
+    "react-bootstrap": "^2.10.4",
+    "react-dom": "^18",
+    "react-parallax": "^3.5.1"
+  },
+  "devDependencies": {
+    "eslint": "^8",
+    "eslint-config-next": "14.2.5"
   }
 }

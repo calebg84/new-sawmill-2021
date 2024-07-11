@@ -1,18 +1,23 @@
-import firebase from 'firebase'
 import 'firebase/firestore'
 import 'firebase/storage'
 import firebaseConfig from './fire-config'
+import { initializeApp } from 'firebase/app'
+import { getFirestore } from 'firebase/firestore'
+import { getStorage } from 'firebase/storage'
 
+let app
+let db
+let storage
 try {
-  firebase.initializeApp(firebaseConfig)
+  app = initializeApp(firebaseConfig)
+  db = getFirestore(app)
+  storage = getStorage(app)
 } catch (err) {
   if (!/already exists/.test(err.message)) {
     console.error('Firebase initialization error', err.stack)
   }
 }
-const storage = firebase.storage()
-const db = firebase.firestore()
-export { storage, db, firebase as default }
+export { storage, db }
 
 // import firebase from 'firebase'
 // import 'firebase/firestore'

@@ -1,6 +1,6 @@
 import Fade from 'react-bootstrap/Fade'
-import Parallax from '../components/Parallax'
-import styles from '../styles/About.module.css'
+import Parallax from '../app/components/Parallax'
+import styles from '../app/styles/About.module.css'
 import { motion } from 'framer-motion'
 
 const containerVariants = {
@@ -38,14 +38,13 @@ const about = () => {
           <h2>About "Us"</h2>
           So, "us" is primarily one man... me (Caleb). But I usually say "we" or
           "us" because I have a few close friends who help me (a ton) in a
-          variety of ways with the business. I've been milling logs now for 8
-          years. Professionally for 7. I started out as a woodworker and when my
-          wife and I bought some land with timber, I invested in a Norwood
-          sawmill and began milling logs for my own use. Things grew from there
-          and eventually I sold the Norwood and purchased a Wood-Mizer portable,
-          fully-hydraulic mill. Milling isn't a full-time operation for me. I'm
-          blessed by the Lord to have a job I love and a side-business that I
-          also love.
+          variety of ways with the business. I've been milling logs since 2014.
+          I started out as a woodworker and when my wife and I bought some land
+          with timber, I invested in a Norwood sawmill and began milling logs
+          for my own use. Things grew from there and eventually I sold the
+          Norwood and purchased a Wood-Mizer portable, fully-hydraulic mill.
+          Milling isn't a full-time operation for me. I'm blessed by the Lord to
+          have a job I love and a side-business that I also love.
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>What We Hope To Be</h2>

@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
-import Button from '../../components/Button'
-import Carousel from '../../components/ImageCarousel'
-import styles from '../../styles/SlabDetail.module.css'
+import Button from '../../app/components/Button'
+import Carousel from '../../app/components/ImageCarousel'
+import styles from '../../app/styles/SlabDetail.module.css'
 
 const SlabDetail = () => {
   const router = useRouter()

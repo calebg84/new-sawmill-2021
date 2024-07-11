@@ -1,10 +1,10 @@
 import Fade from 'react-bootstrap/Fade'
 import Link from 'next/link'
 import Image from 'next/image'
-import MillingRateTable from '../components/MillingRateTable'
-import FirewoodTable from '../components/FirewoodPricesTable'
-import Parallax from '../components/Parallax'
-import styles from '../styles/Services.module.css'
+import MillingRateTable from '../app/components/MillingRateTable'
+import FirewoodTable from '../app/components/FirewoodPricesTable'
+import Parallax from '../app/components/Parallax'
+import styles from '../app/styles/Services.module.css'
 import { motion } from 'framer-motion'
 
 const containerVariants = {
@@ -73,7 +73,7 @@ const services = () => {
           lumber that we have cut and dried in our solar kiln. Our inventory
           isn't huge, but give us a call to see what we have in stock.
         </motion.div>
-        {/* <motion.div variants={childVariants} className={styles.aboutOne}>
+        <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
           <div className={styles.imageWrapper}>
             <Image
@@ -87,8 +87,8 @@ const services = () => {
           lumber cut (pun intended) get processed into firewood. We sell mixed
           hardwood firewood by the bundle or face-cord. We also offer local
           delivery for an additional fee. Firewood rates are listed below.
-        </motion.div> */}
-        <motion.div variants={childVariants} className={styles.aboutOne}>
+        </motion.div>
+        {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Log Buyer</h2>
           <div className={styles.imageWrapper}>
             <Image src='/logs.jpg' alt='log picture' width={400} height={270} />
@@ -98,13 +98,17 @@ const services = () => {
           top-dollar. So, that means we're usually a little picky and frugal
           when it comes to buying logs. That being said, if you've got logs you
           want to get rid of, give us a call and we'd be glad to discuss it.
-        </motion.div>
+        </motion.div> */}
       </div>
       <motion.div variants={childVariants} className={styles.videos}>
         <div className={styles.rateTables}>
           <div>
             <h3>Sawmill Rates (new rates effective 6/1/2022)</h3>
             <MillingRateTable></MillingRateTable>
+          </div>
+          <div>
+            <h3>Firewood Prices</h3>
+            <FirewoodTable></FirewoodTable>
           </div>
         </div>
       </motion.div>

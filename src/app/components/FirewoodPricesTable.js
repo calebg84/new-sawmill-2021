@@ -16,12 +16,12 @@ const PriceTable = () => {
         <tbody>
           <tr>
             <td>Face-cord (1/3 full cord)</td>
-            <td>$100</td>
+            <td>$150</td>
             <td>$25</td>
           </tr>
           <tr>
             <td>Full cord (3 face-cords)</td>
-            <td>$300</td>
+            <td>$425</td>
             <td>$50</td>
           </tr>
           <tr>

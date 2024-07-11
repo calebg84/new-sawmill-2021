@@ -1,5 +1,5 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import { slabFinder } from '../../services/firebaseFuncs'
+import { slabFinder } from '../../app/services/firebaseFuncs'
 
 export default (req, res) => {
   return slabFinder()
