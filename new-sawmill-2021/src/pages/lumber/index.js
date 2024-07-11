@@ -110,7 +110,6 @@ const lumber = ({ slabData, lumberData }) => {
           <Modal.Title>Current Lumber Inventory</Modal.Title>
         </Modal.Header>
         <Modal.Body>
-          {/* <LumberInventoryTable lumber={{}} /> */}
           <LumberInventoryTable lumber={lumberData} />
         </Modal.Body>
         <Modal.Footer>
