@@ -30,7 +30,7 @@ export default function Home() {
             animate={{ opacity: 1 }}
             transition={{ delay: 2.0, duration: 1 }}
           >
-            We're a small, portable sawmill business serving Central Illinois
+            We're a portable sawmill business serving Central Illinois
             (Bloomington, Peoria, Champaign, Decatur). We also sell hardwood
             lumber and live-edge slabs (as inventory allows).{' '}
           </motion.p>

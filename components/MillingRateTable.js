@@ -22,7 +22,17 @@ const RateTable = () => {
           <tr>
             <td>We come to the logs</td>
             <td>$150</td>
-            <td>$100 + $2.50/mile for the round-trip mileage</td>
+            <td>$100 + $2.00/mile for the round-trip mileage</td>
+          </tr>
+          <tr>
+            <td>Logs Over 36" Diameter</td>
+            <td>$175</td>
+            <td>As indicated above</td>
+          </tr>
+          <tr>
+            <td>We come to the logs</td>
+            <td>$150</td>
+            <td>$100 + $2.00/mile for the round-trip mileage</td>
           </tr>
         </tbody>
       </Table>

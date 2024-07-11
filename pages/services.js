@@ -73,7 +73,7 @@ const services = () => {
           lumber that we have cut and dried in our solar kiln. Our inventory
           isn't huge, but give us a call to see what we have in stock.
         </motion.div>
-        {/* <motion.div variants={childVariants} className={styles.aboutOne}>
+        <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
           <div className={styles.imageWrapper}>
             <Image
@@ -87,7 +87,7 @@ const services = () => {
           lumber cut (pun intended) get processed into firewood. We sell mixed
           hardwood firewood by the bundle or face-cord. We also offer local
           delivery for an additional fee. Firewood rates are listed below.
-        </motion.div> */}
+        </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Log Buyer</h2>
           <div className={styles.imageWrapper}>
@@ -105,6 +105,10 @@ const services = () => {
           <div>
             <h3>Sawmill Rates (new rates effective 6/1/2022)</h3>
             <MillingRateTable></MillingRateTable>
+          </div>
+          <div>
+            <h3>Firewood Prices</h3>
+            <FirewoodTable></FirewoodTable>
           </div>
         </div>
       </motion.div>
