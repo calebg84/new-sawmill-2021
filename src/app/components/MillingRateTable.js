@@ -25,8 +25,8 @@ const RateTable = () => {
             <td>$100 + $2.00/mile for the round-trip mileage</td>
           </tr>
           <tr>
-            <td>Logs Over 36" Diameter</td>
-            <td>$175</td>
+            <td>Logs Between 36" - 60" Diameter</td>
+            <td>$225</td>
             <td>As indicated above</td>
           </tr>
         </tbody>
