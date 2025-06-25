@@ -73,6 +73,27 @@ const services = () => {
           lumber that we have cut and dried in our solar kiln. Our inventory
           isn't huge, but give us a call to see what we have in stock.
         </motion.div>
+        <motion.div variants={childVariants} className={styles.aboutOne}>
+          <h2>CNC Services</h2>
+          <div className={styles.imageWrapper}>
+            <Image
+              src='/cnc1.jpg'
+              alt='CNC machine controls'
+              width={400}
+              height={270}
+            />
+          </div>
+          Our CNC services allow us to create custom wood signage, intricate
+          designs, and unique wood products tailored to your specifications.
+          Additionally, we offer slab flattening services for slabs up to 4 ft
+          by 8 ft, ensuring a perfectly level surface for your projects. Contact
+          us to discuss your ideas and see how we can bring them to life with
+          precision CNC machining. Visit our dedicated CNC project site at{' '}
+          <Link href='https://forhimcnc.com' target='_blank'>
+            forhimcnc.com
+          </Link>{' '}
+          to learn more.
+        </motion.div>
         {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
           <div className={styles.imageWrapper}>
