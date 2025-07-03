@@ -1,9 +1,9 @@
 import Carousel from 'react-bootstrap/Carousel'
 import styles from '../styles/SlabDetail.module.css'
 
-const imageCarousel = ({ slab }) => {
+const ImageCarousel = ({ slab, width = '55rem' }) => {
   return (
-    <div className={styles.carouselImage}>
+    <div className={styles.carouselImage} style={{ width, margin: '0 auto' }}>
       <Carousel>
         {slab &&
           slab.images &&
@@ -13,9 +13,10 @@ const imageCarousel = ({ slab }) => {
               <Carousel.Item key={image} interval={3000}>
                 <img
                   key={image}
-                  className='d-block w-100'
+                  className='d-block'
                   src={image}
                   alt='slab photo'
+                  style={{ width: '55rem', height: 'auto', objectFit: 'cover' }}
                 />
               </Carousel.Item>
             )
@@ -25,4 +26,4 @@ const imageCarousel = ({ slab }) => {
   )
 }
 
-export default imageCarousel
+export default ImageCarousel
