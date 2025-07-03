@@ -1,18 +1,18 @@
 .carouselImage {
   background-color: rgba(0, 0, 0, 0.7);
   width: 30rem;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .carouselImage img {
   max-height: 700px;
   width: auto !important;
   height: auto;
-  margin: auto;
+  /* margin: auto; */
 }
 
 .firstRow {
-  padding: 8rem 10rem 5rem 10rem;
+  padding: 8rem 10rem 5rem 1rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
   grid-gap: 3rem;
