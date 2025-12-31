@@ -40,7 +40,10 @@ const services = () => {
       <div className={styles.aboutContent}>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Custom Sawmilling</h2>
-          <div className={styles.imageWrapper}>
+          <div
+            className={styles.imageWrapper}
+            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+          >
             <Image
               src='/man_milling_from_loading_side.jpg'
               alt='milling picture'
@@ -61,7 +64,10 @@ const services = () => {
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Kiln Dried Live-Edge Slabs</h2>
-          <div className={styles.imageWrapper}>
+          <div
+            className={styles.imageWrapper}
+            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+          >
             <Image
               src='/stickered_slabs.jpg'
               alt='lumber picture'
@@ -75,7 +81,10 @@ const services = () => {
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>CNC Services</h2>
-          <div className={styles.imageWrapper}>
+          <div
+            className={styles.imageWrapper}
+            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+          >
             <Image
               src='/cnc1.jpg'
               alt='CNC machine controls'
@@ -93,6 +102,31 @@ const services = () => {
             forhimcnc.com
           </Link>{' '}
           to learn more.
+        </motion.div>
+        <motion.div variants={childVariants} className={styles.aboutOne}>
+          <h2>Custom Fabrication</h2>
+          <div
+            className={styles.imageWrapper}
+            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+          >
+            <Image
+              src='/custom_fab1.jpeg'
+              alt='custom fabrication picture'
+              height={400}
+              width={270}
+              
+            />
+          </div>
+          <p>
+            We offer custom fabrication of tables, cabinetry, and other unique woodworking projects tailored to your needs. Whether you need a one‑of‑a‑kind dining table, built‑in cabinets, shelving, or a special feature piece, we can design and build it from a variety of hardwoods and finishes to match your vision.
+          </p>
+          <p>
+            To discuss your project, share measurements or drawings, and get a quote, please visit our{' '}
+            <Link href='/contact'>
+              Contact page
+            </Link>
+            . We’re happy to work with you on custom designs, material selection, and timelines.
+          </p>
         </motion.div>
         {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
