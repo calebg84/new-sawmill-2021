@@ -86,7 +86,7 @@ const services = () => {
           Our CNC services allow us to create custom wood signage, intricate
           designs, and unique wood products tailored to your specifications.
           Additionally, we offer slab flattening services for slabs up to 4 ft
-          by 8 ft, ensuring a perfectly level surface for your projects. Contact
+          by 8 ft, ensuring a near-perfect level surface for your projects. Contact
           us to discuss your ideas and see how we can bring them to life with
           precision CNC machining. Visit our dedicated CNC project site at{' '}
           <Link href='https://forhimcnc.com' target='_blank'>
