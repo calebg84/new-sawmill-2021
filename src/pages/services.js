@@ -42,7 +42,11 @@ const services = () => {
           <h2>Custom Sawmilling</h2>
           <div
             className={styles.imageWrapper}
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           >
             <Image
               src='/man_milling_from_loading_side.jpg'
@@ -66,7 +70,11 @@ const services = () => {
           <h2>Kiln Dried Live-Edge Slabs</h2>
           <div
             className={styles.imageWrapper}
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           >
             <Image
               src='/stickered_slabs.jpg'
@@ -79,11 +87,17 @@ const services = () => {
           lumber that we have cut and dried in our solar kiln. Our inventory
           isn't huge, but give us a call to see what we have in stock.
         </motion.div>
+      </div>
+      <div className={styles.aboutContent}>
         <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>CNC Services</h2>
           <div
             className={styles.imageWrapper}
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           >
             <Image
               src='/cnc1.jpg'
@@ -95,9 +109,9 @@ const services = () => {
           Our CNC services allow us to create custom wood signage, intricate
           designs, and unique wood products tailored to your specifications.
           Additionally, we offer slab flattening services for slabs up to 4 ft
-          by 8 ft, ensuring a near-perfect level surface for your projects. Contact
-          us to discuss your ideas and see how we can bring them to life with
-          precision CNC machining. Visit our dedicated CNC project site at{' '}
+          by 8 ft, ensuring a near-perfect level surface for your projects.
+          Contact us to discuss your ideas and see how we can bring them to life
+          with precision CNC machining. Visit our dedicated CNC project site at{' '}
           <Link href='https://forhimcnc.com' target='_blank'>
             forhimcnc.com
           </Link>{' '}
@@ -107,25 +121,31 @@ const services = () => {
           <h2>Custom Fabrication</h2>
           <div
             className={styles.imageWrapper}
-            style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}
+            style={{
+              display: 'flex',
+              justifyContent: 'center',
+              alignItems: 'center',
+            }}
           >
             <Image
               src='/custom_fab1.jpeg'
               alt='custom fabrication picture'
               height={400}
               width={270}
-              
             />
           </div>
           <p>
-            We offer custom fabrication of tables, cabinetry, and other unique woodworking projects tailored to your needs. Whether you need a one‑of‑a‑kind dining table, built‑in cabinets, shelving, or a special feature piece, we can design and build it from a variety of hardwoods and finishes to match your vision.
+            We offer custom fabrication of tables, cabinetry, and other unique
+            woodworking projects tailored to your needs. Whether you need a
+            one‑of‑a‑kind dining table, built‑in cabinets, shelving, or a
+            special feature piece, we can design and build it from a variety of
+            hardwoods and finishes to match your vision.
           </p>
           <p>
-            To discuss your project, share measurements or drawings, and get a quote, please visit our{' '}
-            <Link href='/contact'>
-              Contact page
-            </Link>
-            . We’re happy to work with you on custom designs, material selection, and timelines.
+            To discuss your project, share measurements or drawings, and get a
+            quote, please visit our <Link href='/contact'>Contact page</Link>.
+            We’re happy to work with you on custom designs, material selection,
+            and timelines.
           </p>
         </motion.div>
         {/* <motion.div variants={childVariants} className={styles.aboutOne}>
@@ -160,6 +180,10 @@ const services = () => {
           <div>
             <h3>Sawmill Rates (new rates effective 6/1/2022)</h3>
             <MillingRateTable></MillingRateTable>
+          </div>
+          <div>
+            <h3>Slab Flattening Rates</h3>
+            <FirewoodTable></FirewoodTable>
           </div>
           {/* <div>
             <h3>Firewood Prices</h3>
