@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
       <Navbar />
       {children}
       <div style={{ textAlign: 'center' }} className='footer'>
-        Copyright &copy; 2021, Heartland Sawmill, All Rights Reserved; Photos
+        Copyright &copy; 2026, Heartland Sawmill, All Rights Reserved; Photos
         courtesy of Ryan Maxwell rtmaxwell54@gmail.com
       </div>
     </>

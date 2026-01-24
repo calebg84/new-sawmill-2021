@@ -81,12 +81,12 @@ const about = () => {
           >
             <iframe src='https://www.youtube.com/embed/p5N-CAT_gFU?rel=0'></iframe>
           </div>
-          <div
+          {/* <div
             data-aos='fade-left'
             className={`${styles.bottomRight} ${styles.gridBoxes}`}
           >
             <iframe src='https://www.youtube.com/embed/BXyzT4Jxty0?rel=0'></iframe>
-          </div>
+          </div> */}
         </div>
       </motion.div>
     </motion.div>

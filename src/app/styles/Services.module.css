@@ -28,7 +28,7 @@
 }
 
 .videos {
-  padding: 0 9rem;
+  padding: 0 4rem;
 }
 
 .videos h2 {
@@ -50,7 +50,7 @@
 @media (min-width: 1400px) {
   .aboutContent {
     display: flex;
-    padding: 2rem 8rem;
+    padding: 2rem 4rem;
   }
 }
 
