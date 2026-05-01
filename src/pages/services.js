@@ -222,12 +222,12 @@ const services = () => {
         </motion.div> */}
       </div>
       <motion.div variants={childVariants} className={styles.videos}>
-        <div data-aos='fade-up' className={styles.rateTables}>
-          <div>
-            <h3>Sawmill Rates (new rates effective 6/1/2022)</h3>
+        <div data-aos='fade-up' className={styles.aboutContent}>
+          <div className={styles.aboutOne}>
+            <h3>Sawmill Rates (new mileage rates effective 5/1/2026)</h3>
             <MillingRateTable></MillingRateTable>
           </div>
-          <div>
+          <div className={styles.aboutOne}>
             <h3>Slab Flattening Rates</h3>
             <FirewoodTable></FirewoodTable>
           </div>
