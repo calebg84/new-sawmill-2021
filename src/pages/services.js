@@ -153,11 +153,47 @@ const services = () => {
             <p>
               To discuss your project, share measurements or drawings, and get a
               quote, please visit our <Link href='/contact'>Contact page</Link>.
-              We’re happy to work with you on custom designs, material
+              We're happy to work with you on custom designs, material
               selection, and timelines.
             </p>
           </div>
         </motion.div>
+        <div className={styles.aboutContent}>
+          <motion.div variants={childVariants} className={styles.aboutOne}>
+            <div data-aos='fade-up'>
+              <h2>Trailer Decking</h2>
+              <div
+                className={styles.imageWrapper}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Image
+                  src='/stacked_oak.jpg'
+                  alt='trailer decking picture'
+                  width={400}
+                  height={270}
+                />
+              </div>
+              <p>
+                We specialize in custom milling hardwood trailer decking to your
+                exact specifications. We offer premium hardwood options
+                including red oak, white oak, and locust, available as inventory
+                allows. Each board is milled to your required dimensions and can
+                be finished with an outdoor oil if required.
+              </p>
+              <p>
+                Whether you need decking for a single trailer or a larger order,
+                we can provide durable, high-quality hardwood that will last. To
+                discuss your trailer decking needs, specifications, and get a
+                quote, please visit our{' '}
+                <Link href='/contact'>Contact page</Link> or give us a call.
+              </p>
+            </div>
+          </motion.div>
+        </div>
         {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
           <div className={styles.imageWrapper}>
