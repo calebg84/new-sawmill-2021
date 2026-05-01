@@ -39,115 +39,161 @@ const services = () => {
       </motion.div>
       <div className={styles.aboutContent}>
         <motion.div variants={childVariants} className={styles.aboutOne}>
-          <h2>Custom Sawmilling</h2>
-          <div
-            className={styles.imageWrapper}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              src='/man_milling_from_loading_side.jpg'
-              alt='milling picture'
-              width={400}
-              height={270}
-            />
+          <div data-aos='fade-up'>
+            <h2>Custom Sawmilling</h2>
+            <div
+              className={styles.imageWrapper}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Image
+                src='/man_milling_from_loading_side.jpg'
+                alt='milling picture'
+                width={400}
+                height={270}
+              />
+            </div>
+            Custom milling logs for customers is one of the services we offer.
+            Our sawmill can handle logs up to 20 ft long and 3 ft in diameter.
+            It can cut logs into most any dimension you could request. Whether
+            it's 1/8" veneer or 10"x10" timbers, our mill can handle it. Our
+            mill is portable so we can come to you or you can bring your logs to
+            us. It saves a little money to bring the logs to us. Check out the
+            rates table below and see our portable sawmill in action by checking
+            out our{' '}
+            <Link key='About' href={`/about`}>
+              About page.
+            </Link>
           </div>
-          Custom milling logs for customers is one of the services we offer. Our
-          sawmill can handle logs up to 20 ft long and 3 ft in diameter. It can
-          cut logs into most any dimension you could request. Whether it's 1/8"
-          veneer or 10"x10" timbers, our mill can handle it. Our mill is
-          portable so we can come to you or you can bring your logs to us. It
-          saves a little money to bring the logs to us. Check out the rates
-          table below and see our portable sawmill in action by checking out our{' '}
-          <Link key='About' href={`/about`}>
-            About page.
-          </Link>
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
-          <h2>Kiln Dried Live-Edge Slabs</h2>
-          <div
-            className={styles.imageWrapper}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              src='/stickered_slabs.jpg'
-              alt='lumber picture'
-              width={400}
-              height={270}
-            />
+          <div data-aos='fade-up'>
+            <h2>Kiln Dried Live-Edge Slabs</h2>
+            <div
+              className={styles.imageWrapper}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Image
+                src='/stickered_slabs.jpg'
+                alt='lumber picture'
+                width={400}
+                height={270}
+              />
+            </div>
+            In addition to custom milling, we sell kiln dried hardwood slabs and
+            lumber that we have cut and dried in our solar kiln. Our inventory
+            isn't huge, but give us a call to see what we have in stock.
           </div>
-          In addition to custom milling, we sell kiln dried hardwood slabs and
-          lumber that we have cut and dried in our solar kiln. Our inventory
-          isn't huge, but give us a call to see what we have in stock.
         </motion.div>
       </div>
       <div className={styles.aboutContent}>
         <motion.div variants={childVariants} className={styles.aboutOne}>
-          <h2>CNC Services</h2>
-          <div
-            className={styles.imageWrapper}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              src='/cnc1.jpg'
-              alt='CNC machine controls'
-              width={400}
-              height={270}
-            />
+          <div data-aos='fade-up'>
+            <h2>CNC Services</h2>
+            <div
+              className={styles.imageWrapper}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Image
+                src='/cnc1.jpg'
+                alt='CNC machine controls'
+                width={400}
+                height={270}
+              />
+            </div>
+            Our CNC services allow us to create custom wood signage, intricate
+            designs, and unique wood products tailored to your specifications.
+            Additionally, we offer slab flattening services for slabs up to 4 ft
+            by 8 ft, ensuring a near-perfect level surface for your projects.
+            Contact us to discuss your ideas and see how we can bring them to
+            life with precision CNC machining. Visit our dedicated CNC project
+            site at{' '}
+            <Link href='https://forhimcnc.com' target='_blank'>
+              forhimcnc.com
+            </Link>{' '}
+            to learn more.
           </div>
-          Our CNC services allow us to create custom wood signage, intricate
-          designs, and unique wood products tailored to your specifications.
-          Additionally, we offer slab flattening services for slabs up to 4 ft
-          by 8 ft, ensuring a near-perfect level surface for your projects.
-          Contact us to discuss your ideas and see how we can bring them to life
-          with precision CNC machining. Visit our dedicated CNC project site at{' '}
-          <Link href='https://forhimcnc.com' target='_blank'>
-            forhimcnc.com
-          </Link>{' '}
-          to learn more.
         </motion.div>
         <motion.div variants={childVariants} className={styles.aboutOne}>
-          <h2>Custom Fabrication</h2>
-          <div
-            className={styles.imageWrapper}
-            style={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-            }}
-          >
-            <Image
-              src='/custom_fab1.jpeg'
-              alt='custom fabrication picture'
-              height={400}
-              width={270}
-            />
+          <div data-aos='fade-up'>
+            <h2>Custom Fabrication</h2>
+            <div
+              className={styles.imageWrapper}
+              style={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+              }}
+            >
+              <Image
+                src='/custom_fab1.jpeg'
+                alt='custom fabrication picture'
+                height={400}
+                width={270}
+              />
+            </div>
+            <p>
+              We offer custom fabrication of tables, cabinetry, and other unique
+              woodworking projects tailored to your needs. Whether you need a
+              one‑of‑a‑kind dining table, built‑in cabinets, shelving, or a
+              special feature piece, we can design and build it from a variety
+              of hardwoods and finishes to match your vision.
+            </p>
+            <p>
+              To discuss your project, share measurements or drawings, and get a
+              quote, please visit our <Link href='/contact'>Contact page</Link>.
+              We're happy to work with you on custom designs, material
+              selection, and timelines.
+            </p>
           </div>
-          <p>
-            We offer custom fabrication of tables, cabinetry, and other unique
-            woodworking projects tailored to your needs. Whether you need a
-            one‑of‑a‑kind dining table, built‑in cabinets, shelving, or a
-            special feature piece, we can design and build it from a variety of
-            hardwoods and finishes to match your vision.
-          </p>
-          <p>
-            To discuss your project, share measurements or drawings, and get a
-            quote, please visit our <Link href='/contact'>Contact page</Link>.
-            We’re happy to work with you on custom designs, material selection,
-            and timelines.
-          </p>
         </motion.div>
+        <div className={styles.aboutContent}>
+          <motion.div variants={childVariants} className={styles.aboutOne}>
+            <div data-aos='fade-up'>
+              <h2>Trailer Decking</h2>
+              <div
+                className={styles.imageWrapper}
+                style={{
+                  display: 'flex',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                }}
+              >
+                <Image
+                  src='/stacked_oak.jpg'
+                  alt='trailer decking picture'
+                  width={400}
+                  height={270}
+                />
+              </div>
+              <p>
+                We specialize in custom milling hardwood trailer decking to your
+                exact specifications. We offer premium hardwood options
+                including red oak, white oak, and locust, available as inventory
+                allows. Each board is milled to your required dimensions and can
+                be finished with an outdoor oil if required.
+              </p>
+              <p>
+                Whether you need decking for a single trailer or a larger order,
+                we can provide durable, high-quality hardwood that will last. To
+                discuss your trailer decking needs, specifications, and get a
+                quote, please visit our{' '}
+                <Link href='/contact'>Contact page</Link> or give us a call.
+              </p>
+            </div>
+          </motion.div>
+        </div>
         {/* <motion.div variants={childVariants} className={styles.aboutOne}>
           <h2>Firewood</h2>
           <div className={styles.imageWrapper}>
@@ -176,7 +222,7 @@ const services = () => {
         </motion.div> */}
       </div>
       <motion.div variants={childVariants} className={styles.videos}>
-        <div className={styles.rateTables}>
+        <div data-aos='fade-up' className={styles.rateTables}>
           <div>
             <h3>Sawmill Rates (new rates effective 6/1/2022)</h3>
             <MillingRateTable></MillingRateTable>
