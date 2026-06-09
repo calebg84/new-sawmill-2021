@@ -494,164 +494,167 @@ export default function ServicesPage() {
             />
           </Box>
 
-          <TableContainer
-            component={Paper}
+          <Paper
+            elevation={0}
             sx={{
               border: "1px solid #D4C4A8",
               borderRadius: 2,
               bgcolor: "#FFFFFF",
               maxWidth: 800,
               mx: "auto",
+              overflow: "hidden",
             }}
           >
-            <Table>
-              <TableHead>
-                <TableRow sx={{ bgcolor: "#3D5A3D" }}>
-                  <TableCell
+            {/* Header */}
+            <Box
+              sx={{
+                bgcolor: "#3D5A3D",
+                px: 3,
+                py: 2,
+              }}
+            >
+              <Typography
+                sx={{
+                  color: "#F5F0E6",
+                  fontWeight: 700,
+                  fontFamily: '"Playfair Display", serif',
+                  letterSpacing: "0.03em",
+                  fontSize: "0.95rem",
+                }}
+              >
+                SLAB FLATTENING PRICING
+              </Typography>
+            </Box>
+
+            {/* Content */}
+            <Grid container>
+              <Grid size={{ xs: 12, md: 4 }}>
+                <Box
+                  sx={{
+                    textAlign: "center",
+                    py: 4,
+                    px: 2,
+                    borderBottom: {
+                      xs: "1px solid #D4C4A8",
+                      md: "none",
+                    },
+                    borderRight: {
+                      md: "1px solid #D4C4A8",
+                    },
+                  }}
+                >
+                  <Typography
                     sx={{
-                      color: "#F5F0E6",
+                      color: "#3D5A3D",
+                      fontSize: "2.75rem",
                       fontWeight: 700,
                       fontFamily: '"Playfair Display", serif',
-                      fontSize: "0.95rem",
-                      letterSpacing: "0.03em",
-                      borderBottom: "none",
+                      lineHeight: 1,
                     }}
                   >
-                    SLAB SQUARE FOOTAGE
-                  </TableCell>
-                  <TableCell
+                    $10
+                  </Typography>
+
+                  <Typography
                     sx={{
-                      color: "#F5F0E6",
-                      fontWeight: 700,
-                      fontFamily: '"Playfair Display", serif',
-                      fontSize: "0.95rem",
-                      letterSpacing: "0.03em",
-                      borderBottom: "none",
-                    }}
-                  >
-                    FLATTENING FEE
-                  </TableCell>
-                  {/* <TableCell
-                    sx={{
-                      color: "#F5F0E6",
-                      fontWeight: 700,
-                      fontFamily: '"Playfair Display", serif',
-                      fontSize: "0.95rem",
-                      letterSpacing: "0.03em",
-                      borderBottom: "none",
-                    }}
-                  >
-                    NOTES
-                  </TableCell> */}
-                </TableRow>
-              </TableHead>
-              <TableBody>
-                <TableRow>
-                  <TableCell
-                    sx={{
+                      color: "#5C4A3D",
                       fontFamily: '"Lora", serif',
-                      color: "#2D2418",
-                      borderBottom: "1px solid #D4C4A8",
+                      mt: 1,
                     }}
                   >
-                    0 - 9.9 sq ft
-                  </TableCell>
-                  <TableCell
+                    per sq ft
+                  </Typography>
+                </Box>
+              </Grid>
+
+              <Grid size={{ xs: 12, md: 4 }}>
+                <Box
+                  sx={{
+                    textAlign: "center",
+                    py: 4,
+                    px: 2,
+                    borderBottom: {
+                      xs: "1px solid #D4C4A8",
+                      md: "none",
+                    },
+                    borderRight: {
+                      md: "1px solid #D4C4A8",
+                    },
+                  }}
+                >
+                  <Typography
                     sx={{
-                      fontFamily: '"Lora", serif',
                       color: "#2D2418",
+                      fontSize: "0.9rem",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                      mb: 1,
                       fontWeight: 600,
-                      borderBottom: "1px solid #D4C4A8",
+                    }}
+                  >
+                    Minimum Charge
+                  </Typography>
+
+                  <Typography
+                    sx={{
+                      color: "#2D2418",
+                      fontSize: "2rem",
+                      fontWeight: 700,
+                      fontFamily: '"Playfair Display", serif',
                     }}
                   >
                     $100
-                  </TableCell>
-                  {/* <TableCell
+                  </Typography>
+                </Box>
+              </Grid>
+
+              <Grid size={{ xs: 12, md: 4 }}>
+                <Box
+                  sx={{
+                    textAlign: "center",
+                    py: 4,
+                    px: 2,
+                  }}
+                >
+                  <Typography
                     sx={{
-                      fontFamily: '"Lora", serif',
-                      color: "#5C4A3D",
-                      borderBottom: "1px solid #D4C4A8",
-                    }}
-                  >
-                    $100 Travel fee plus $2.50 / mile for roundtrip; 2hr minimum
-                  </TableCell> */}
-                </TableRow>
-                <TableRow sx={{ bgcolor: "#FAF7F0" }}>
-                  <TableCell
-                    sx={{
-                      fontFamily: '"Lora", serif',
                       color: "#2D2418",
-                      borderBottom: "1px solid #D4C4A8",
-                    }}
-                  >
-                    10 - 19.9 sq ft
-                  </TableCell>
-                  <TableCell
-                    sx={{
-                      fontFamily: '"Lora", serif',
-                      color: "#2D2418",
+                      fontSize: "0.9rem",
+                      textTransform: "uppercase",
+                      letterSpacing: "0.05em",
+                      mb: 1,
                       fontWeight: 600,
-                      borderBottom: "1px solid #D4C4A8",
                     }}
                   >
-                    $150
-                  </TableCell>
-                  {/* <TableCell
+                    Maximum Size
+                  </Typography>
+
+                  <Typography
                     sx={{
-                      fontFamily: '"Lora", serif',
-                      color: "#5C4A3D",
-                      borderBottom: "1px solid #D4C4A8",
-                    }}
-                  >
-                    zero travel expenses; one hour minimum
-                  </TableCell> */}
-                </TableRow>
-                <TableRow>
-                  <TableCell
-                    sx={{
-                      fontFamily: '"Lora", serif',
                       color: "#2D2418",
-                      borderBottom: "1px solid #D4C4A8",
+                      fontSize: "2rem",
+                      fontWeight: 700,
+                      fontFamily: '"Playfair Display", serif',
                     }}
                   >
-                    20-32 sq ft
-                  </TableCell>
-                  <TableCell
-                    sx={{
-                      fontFamily: '"Lora", serif',
-                      color: "#2D2418",
-                      fontWeight: 600,
-                      borderBottom: "1px solid #D4C4A8",
-                    }}
-                  >
-                    $200
-                  </TableCell>
-                  {/* <TableCell
-                    sx={{
-                      fontFamily: '"Lora", serif',
-                      color: "#5C4A3D",
-                      borderBottom: "1px solid #D4C4A8",
-                    }}
-                  >
-                    Travel fees above apply to mobile milling of larger logs
-                  </TableCell> */}
-                </TableRow>
-              </TableBody>
-            </Table>
-          </TableContainer>
+                    32 sq ft
+                  </Typography>
+                </Box>
+              </Grid>
+            </Grid>
+          </Paper>
 
           <Typography
             sx={{
               textAlign: "center",
-              mt: 3,
+              mt: 2,
               color: "#5C4A3D",
-              fontSize: "0.85rem",
               fontFamily: '"Lora", serif',
-              fontStyle: "italic",
+              fontSize: "0.95rem",
             }}
           >
-            * Rates may vary based on slab size and condition. Contact us for an
-            accurate estimate.
+            Pricing is calculated at $10 per square foot with a $100 minimum
+            charge.
           </Typography>
         </Container>
       </Box>
