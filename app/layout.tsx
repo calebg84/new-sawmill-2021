@@ -24,19 +24,19 @@ export const metadata: Metadata = {
   icons: {
     icon: [
       {
-        url: "/heartland_sawmill_log.PNG",
+        url: "/heartland_sawmill_logo.PNG",
         media: "(prefers-color-scheme: light)",
       },
       {
-        url: "/heartland_sawmill_log.PNG",
+        url: "/heartland_sawmill_logo.PNG",
         media: "(prefers-color-scheme: dark)",
       },
       {
-        url: "/heartland_sawmill_log.PNG",
+        url: "/heartland_sawmill_logo.PNG",
         type: "image/svg+xml",
       },
     ],
-    apple: "/heartland_sawmill_log.PNG",
+    apple: "/heartland_sawmill_logo.PNG",
   },
 };
 
