@@ -653,8 +653,8 @@ export default function ServicesPage() {
               fontSize: "0.95rem",
             }}
           >
-            Pricing is calculated at $10 per square foot with a $100 minimum
-            charge.
+            This rate is for double-sided flattening. So for a 15 sq ft slab, it
+            would cost $150 to flatten both sides.
           </Typography>
         </Container>
       </Box>
