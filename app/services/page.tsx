@@ -237,7 +237,7 @@ export default function ServicesPage() {
               fontFamily: '"Playfair Display", serif',
             }}
           >
-            MILLING RATES
+            RATES
           </Typography>
           <Box
             sx={{
@@ -414,6 +414,37 @@ export default function ServicesPage() {
                     }}
                   >
                     Travel fees above apply to mobile milling of larger logs
+                  </TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell
+                    sx={{
+                      fontFamily: '"Lora", serif',
+                      color: "#2D2418",
+                      borderBottom: "1px solid #D4C4A8",
+                    }}
+                  >
+                    Additional Services (skid steer, tree cleanup, etc.)
+                  </TableCell>
+                  <TableCell
+                    sx={{
+                      fontFamily: '"Lora", serif',
+                      color: "#2D2418",
+                      fontWeight: 600,
+                      borderBottom: "1px solid #D4C4A8",
+                    }}
+                  >
+                    varies
+                  </TableCell>
+                  <TableCell
+                    sx={{
+                      fontFamily: '"Lora", serif',
+                      color: "#5C4A3D",
+                      borderBottom: "1px solid #D4C4A8",
+                    }}
+                  >
+                    Reach out for a quote on additional services. We can provide
+                    skid steer work, tree cleanup, and more.
                   </TableCell>
                 </TableRow>
               </TableBody>
